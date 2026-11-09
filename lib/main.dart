@@ -2,85 +2,92 @@
 import 'package:flutter/material.dart';
 
 void main() {
-  runApp(const MyApp());
+  runApp(MyApp());
 }
 
 class MyApp extends StatelessWidget {
-  const MyApp({super.key});
-
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
+      
       home: Scaffold(
         appBar: AppBar(
-          title: const Text('Student Profile'),
+          title: Text('Student Profile'),
           backgroundColor: Colors.blue,
           foregroundColor: Colors.white,
         ),
+
         body: Column(
           children: [
+
+            // Profile Container
             Container(
               width: double.infinity,
-              padding: const EdgeInsets.all(20),
-              margin: const EdgeInsets.all(10),
+              padding: EdgeInsets.all(20),
+              margin: EdgeInsets.all(10),
               decoration: BoxDecoration(
                 color: Colors.blue.shade100,
                 borderRadius: BorderRadius.circular(10),
               ),
-              child: const Text(
+              child: Text(
                 'Student Profile',
                 textAlign: TextAlign.center,
                 style: TextStyle(fontSize: 20),
               ),
             ),
 
-            const Text(
+            // Student Details
+            Text(
               'Raj',
               style: TextStyle(fontSize: 22),
             ),
 
-            const Text('Computer Science and Engineering'),
+            Text('Computer Science and Engineering'),
 
-            const SizedBox(height: 15),
+            SizedBox(height: 15),
 
+            // Icons
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-              children: const [
+              children: [
                 Icon(Icons.home, size: 30),
                 Icon(Icons.person, size: 30),
                 Icon(Icons.settings, size: 30),
               ],
             ),
 
-            const SizedBox(height: 15),
+            SizedBox(height: 15),
 
+            // Course Card
             Card(
               child: ListTile(
-                leading: const Icon(Icons.book),
-                title: const Text('Flutter'),
-                subtitle: const Text(
-                  'Mobile Application Development',
-                ),
+                leading: Icon(Icons.book),
+                title: Text('Flutter'),
+                subtitle: Text('Mobile Application Development'),
               ),
             ),
 
-            const Text(
+            // Subjects Heading
+            Text(
               'Subjects',
               style: TextStyle(fontSize: 20),
             ),
 
+            // Subject List
             Expanded(
               child: ListView(
-                children: const [
+                children: [
                   ListTile(
                     leading: Icon(Icons.book),
                     title: Text('Flutter'),
                   ),
+
                   ListTile(
                     leading: Icon(Icons.cloud),
                     title: Text('Cloud Computing'),
                   ),
+
                   ListTile(
                     leading: Icon(Icons.code),
                     title: Text('Programming'),
